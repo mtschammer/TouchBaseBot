@@ -1,0 +1,10 @@
+touchbasebot:
+  build: .
+  # command: node_modules/.bin/nodemon index.js # Doesn't work on OSX
+  environment:
+    NODE_ENV: development
+  ports:
+    - 3000:3000
+  volumes:
+    - .:/home/bot/touchbasebot
+    - /home/bot/touchbasebot/node_modules
